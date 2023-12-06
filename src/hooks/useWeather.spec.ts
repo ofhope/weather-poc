@@ -39,7 +39,8 @@ describe('useWeather', () => {
         resolvedAddress: "Melbourne, VIC 3000, Australia",
         description: "Similar temperatures continuing with a chance of rain multiple days.",
         currentConditions: expect.objectContaining({
-          temp: 19.4
+          temp: 19.4,
+          icon: "cloudy"
         }),
         hourlyForecast: expect.anything()
       }))
