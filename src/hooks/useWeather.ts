@@ -1,25 +1,8 @@
 import axios from "axios"
 import { useCallback, useState } from "react"
-
-export const NETWORK_ERROR = "NETWORK_ERROR"
-export const BAD_INPUT_ERROR = "BAD_INPUT_ERROR"
-
-interface WeatherApiDay {
-  datetime: string
-}
-
-interface WeatherApiResponse {
-  resolvedAddress: string
-  description: string
-  days: WeatherApiDay[]
-}
-
-type WeatherResult = WeatherApiResponse | typeof NETWORK_ERROR | typeof BAD_INPUT_ERROR | undefined
-
-interface WeatherState {
-  loading: boolean,
-  result: WeatherResult
-}
+import { BAD_INPUT_ERROR, NETWORK_ERROR, WeatherApiResponse, WeatherState } from "./useWeather.types"
+import { type Dayjs } from "dayjs"
+import { responseToCurrent } from "./useWeather.utils"
 
 const INITAL_STATE: WeatherState = {
   loading: false,
@@ -43,7 +26,7 @@ const ERROR_STATE: WeatherState = {
 
 export const useWeather = (apiToken: string) => {
   const [state, setState] = useState<WeatherState>(INITAL_STATE)
-  const searchCity = useCallback(async (city: string) => {
+  const searchCity = useCallback(async (city: string, datetime: Dayjs) => {
     setState(LOADING_STATE)
       const { data, status } = await axios.get<WeatherApiResponse>(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=${apiToken}&contentType=json`, { validateStatus: () => true})
 
@@ -56,10 +39,10 @@ export const useWeather = (apiToken: string) => {
       setState(ERROR_STATE)
       return
     }
-
+    
     setState({
       loading: false,
-      result: data
+      result: responseToCurrent(data, datetime)
     })
   }, [setState])
 
