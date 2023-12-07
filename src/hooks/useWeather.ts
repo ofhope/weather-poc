@@ -28,7 +28,7 @@ export const useWeather = (apiToken: string) => {
   const [state, setState] = useState<WeatherState>(INITAL_STATE)
   const searchCity = useCallback(async (city: string, datetime: Dayjs) => {
     setState(LOADING_STATE)
-      const { data, status } = await axios.get<WeatherApiResponse>(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=${apiToken}&contentType=json`, { validateStatus: () => true})
+    const { data, status } = await axios.get<WeatherApiResponse>(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=${apiToken}&contentType=json`, { validateStatus: () => true })
 
     if (status == 400) {
       setState(ERROR_BAD_INPUT_STATE)
@@ -39,7 +39,7 @@ export const useWeather = (apiToken: string) => {
       setState(ERROR_STATE)
       return
     }
-    
+
     setState({
       loading: false,
       result: responseToCurrent(data, datetime)
