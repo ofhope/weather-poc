@@ -2,7 +2,7 @@ import axios from "axios"
 import { useCallback, useState } from "react"
 import { BAD_INPUT_ERROR, NETWORK_ERROR, WeatherApiResponse, WeatherState } from "./useWeather.types"
 import { type Dayjs } from "dayjs"
-import { responseToCurrent } from "./useWeather.utils"
+import { responseToForecast } from "./useWeather.utils"
 
 const INITAL_STATE: WeatherState = {
   loading: false,
@@ -42,7 +42,7 @@ export const useWeather = (apiToken: string) => {
 
     setState({
       loading: false,
-      result: responseToCurrent(data, datetime)
+      result: responseToForecast(data, datetime)
     })
   }, [setState])
 
