@@ -4,7 +4,9 @@ This is a simple weather app where you can search for a location a forecast is d
 
 ### Set up
 
-Use a package manager. I used `npm`.
+Copy `.env.example` to `.env` and set the API token.
+
+Use a package manager to install and run. I used `npm`.
 
 ```bash
 npm i
