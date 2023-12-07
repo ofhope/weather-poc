@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Weather } from '.';
+import { CurrentWeather } from '.';
 
 const meta = {
-  title: 'layout/Weather',
-  component: Weather,
+  title: 'layout/CurrentWeather',
+  component: CurrentWeather,
   parameters: {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
 
-} satisfies Meta<typeof Weather>;
+} satisfies Meta<typeof CurrentWeather>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

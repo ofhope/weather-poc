@@ -1,12 +1,12 @@
 
-interface WeatherProps {
+interface CurrentWeatherProps {
   icon: string,
   temp: number,
   description: string,
   location: string
 }
 
-export const Weather = ({icon, temp, description, location}: WeatherProps) => {
+export const CurrentWeather = ({icon, temp, description, location}: CurrentWeatherProps) => {
   return (
     <>
       <p>{icon}</p>

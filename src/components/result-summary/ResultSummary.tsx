@@ -2,7 +2,7 @@ import { BAD_INPUT_ERROR, GENERIC_ERROR, WeatherResult } from "../../domain/type
 import { Container } from "../container"
 import { Forecast } from "../forecast"
 import { Message } from "../message"
-import { Weather } from "../weather"
+import { CurrentWeather } from "../current-weather"
 
 interface WeatherProps {
   loading: boolean,
@@ -29,7 +29,7 @@ export const ResultSummary = ({ loading, result }: WeatherProps) => {
 
   return (
     <Container>
-      <Weather description={result.description} location={result.resolvedAddress} icon={result.currentConditions.icon} temp={result.currentConditions.temp} />
+      <CurrentWeather description={result.description} location={result.resolvedAddress} icon={result.currentConditions.icon} temp={result.currentConditions.temp} />
       <Forecast hours={result.hourlyForecast} />
     </Container>
   )
