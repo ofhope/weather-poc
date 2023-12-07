@@ -1,5 +1,4 @@
 import { useCallback } from 'react'
-import './App.css'
 import { useWeather } from './hooks/useWeather'
 import { Header } from './components/header/Header'
 import dayjs from 'dayjs'
