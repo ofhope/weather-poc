@@ -1,6 +1,8 @@
+import { WeatherIcon } from "../../domain/types"
+import { Icon } from "../icon"
 
 interface CurrentWeatherProps {
-  icon: string,
+  icon: WeatherIcon,
   temp: number,
   description: string,
   location: string
@@ -9,7 +11,7 @@ interface CurrentWeatherProps {
 export const CurrentWeather = ({icon, temp, description, location}: CurrentWeatherProps) => {
   return (
     <>
-      <p>{icon}</p>
+      <Icon variant={icon} size="large" />
       <p>{temp.toString()}°C</p>
       <p>{description}</p>
       <p>{location}</p>

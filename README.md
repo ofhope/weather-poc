@@ -40,3 +40,8 @@ npm run storybook
 
 Emphasis was put on the API interaction inside the `useWeather` hook. Ensuring a healthy result or predictable error was returned. Styling and component testing is a little sparse for this reason.
 
+Icons used
+https://www.iconfinder.com/iconsets/weather-color-2
+
+Design inspiration
+https://sketchelements.com/multifunctional-weather-app-demo/
