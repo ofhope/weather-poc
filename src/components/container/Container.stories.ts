@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { PageContainer } from './PageContainer';
+import { Container } from './Container';
 
 const meta = {
-  title: 'layout/PageContainer',
-  component: PageContainer,
+  title: 'layout/Container',
+  component: Container,
   parameters: {
     layout: 'fullscreen',
   },
-} satisfies Meta<typeof PageContainer>;
+} satisfies Meta<typeof Container>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

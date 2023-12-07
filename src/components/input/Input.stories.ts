@@ -1,13 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { PageContainer } from './PageContainer';
+import { Input } from '.';
 
 const meta = {
-  title: 'layout/PageContainer',
-  component: PageContainer,
+  title: 'form/Input',
+  component: Input,
   parameters: {
     layout: 'fullscreen',
   },
-} satisfies Meta<typeof PageContainer>;
+  tags: ['autodocs'],
+
+} satisfies Meta<typeof Input>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
