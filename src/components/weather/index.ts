@@ -1,3 +1,3 @@
 import { Weather } from "./Weather";
 
-export { Weather}
+export { Weather }

@@ -1,5 +1,5 @@
 import { type Dayjs } from "dayjs";
-import { CurrentWeather, WeatherApiResponse } from "./useWeather.types";
+import { CurrentWeather, WeatherApiResponse } from "../domain/types";
 
 const datetimeToString = (datetime: Dayjs): string => datetime.format('HH:00:00')
 

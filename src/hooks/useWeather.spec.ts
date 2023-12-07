@@ -2,7 +2,7 @@ import { act, renderHook, waitFor } from "@testing-library/react"
 import axios from "axios"
 import { useWeather } from "./useWeather"
 import dayjs from "dayjs"
-import { BAD_INPUT_ERROR, NETWORK_ERROR } from "./useWeather.types"
+import { BAD_INPUT_ERROR, GENERIC_ERROR } from "../domain/types"
 import { weatherResponseMock } from "./useWeather.mock"
 
 describe('useWeather', () => {
@@ -24,7 +24,7 @@ describe('useWeather', () => {
     await act(() => result.current.searchCity('foo', dayjs()))
 
     waitFor(() =>
-      expect(result.current.result).toEqual(NETWORK_ERROR)
+      expect(result.current.result).toEqual(GENERIC_ERROR)
     )
   })
 

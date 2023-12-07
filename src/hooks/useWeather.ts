@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useCallback, useState } from "react"
-import { BAD_INPUT_ERROR, NETWORK_ERROR, WeatherApiResponse, WeatherState } from "./useWeather.types"
+import { BAD_INPUT_ERROR, GENERIC_ERROR, WeatherApiResponse, WeatherState } from "../domain/types"
 import { type Dayjs } from "dayjs"
 import { responseToForecast } from "./useWeather.utils"
 
@@ -21,7 +21,7 @@ const ERROR_BAD_INPUT_STATE: WeatherState = {
 
 const ERROR_STATE: WeatherState = {
   loading: false,
-  result: NETWORK_ERROR
+  result: GENERIC_ERROR
 } as const
 
 export const useWeather = (apiToken: string) => {
