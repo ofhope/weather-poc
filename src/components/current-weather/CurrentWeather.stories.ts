@@ -16,7 +16,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    icon: "sunny",
+    icon: "cloudy",
     temp: 17.5,
     description: "Something awesome",
     location: "Australia",
