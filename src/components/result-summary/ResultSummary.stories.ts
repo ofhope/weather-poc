@@ -49,14 +49,14 @@ export const Default: Story = {
 
 export const BadInputError: Story = {
   args: {
-    loading: true,
+    loading: false,
     result: BAD_INPUT_ERROR
   }
 };
 
 export const GenericError: Story = {
   args: {
-    loading: true,
+    loading: false,
     result: GENERIC_ERROR
   }
 };

@@ -11,12 +11,12 @@ interface WeatherProps {
 
 export const ResultSummary = ({ loading, result }: WeatherProps) => {
 
-  if (result === undefined) {
-    return <Message>Welcome to weather search. Type a city in the search input above to find current weather conditions.</Message>
-  }
-
   if (loading) {
     return (<Container>Loading...</Container>)
+  }
+
+  if (result === undefined) {
+    return <Message>Welcome to weather search. Type a city in the search input above to find current weather conditions.</Message>
   }
 
   if (result === BAD_INPUT_ERROR) {
