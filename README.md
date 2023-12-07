@@ -1,6 +1,6 @@
 # Weather App POC
 
-This is a simple weather app where you can search for a location a forecast is displayed.
+This is a simple weather app where you can search for a location and a forecast is displayed.
 
 ### Set up
 
