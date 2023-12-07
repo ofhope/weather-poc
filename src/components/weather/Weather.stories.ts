@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Weather } from '.';
 
 const meta = {
-  title: 'form/Weather',
+  title: 'layout/Weather',
   component: Weather,
   parameters: {
     layout: 'fullscreen',
