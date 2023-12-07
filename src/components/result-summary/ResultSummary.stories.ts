@@ -42,7 +42,29 @@ export const Default: Story = {
         humidity: 20,
         icon: "cloudy"
       },
-      hourlyForecast: []
+      hourlyForecast: [
+        {
+          temp: 14.3,
+          icon: "cloudy",
+          datetime: "07:00:00",
+          feelslike: 14,
+          humidity: 7
+        },
+        {
+          temp: 14.3,
+          icon: "partly-cloudy-day",
+          datetime: "07:00:00",
+          feelslike: 14,
+          humidity: 7
+        },
+        {
+          temp: 14.3,
+          icon: "cloudy",
+          datetime: "07:00:00",
+          feelslike: 14,
+          humidity: 7
+        }
+      ]
     }
   }
 };

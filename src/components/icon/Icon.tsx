@@ -4,6 +4,7 @@ import Cloudy from "./variant/cloudy.svg?react";
 import Snow from "./variant/snow.svg?react";
 import Rain from "./variant/rain.svg?react";
 import Fog from "./variant/fog.svg?react";
+import Wind from "./variant/wind.svg?react";
 import PartlyCloudyDay from "./variant/partly-cloudy-day.svg?react";
 import PartlyCloudyNight from "./variant/partly-cloudy-night.svg?react";
 import ClearDay from "./variant/clear-day.svg?react";
@@ -21,7 +22,7 @@ const VariantDictionary: Record<WeatherIcon, FunctionComponent<SVGProps<SVGSVGEl
   snow: Snow,
   rain: Rain,
   fog: Fog,
-  wind: Cloudy,
+  wind: Wind,
   "partly-cloudy-day": PartlyCloudyDay,
   "partly-cloudy-night": PartlyCloudyNight,
   "clear-day": ClearDay,

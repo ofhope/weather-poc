@@ -1,7 +1,8 @@
+import { WeatherIcon } from "../../domain/types"
 import { ForecastItem } from "./ForecastItem"
 
 interface Forecast {
-  icon: string,
+  icon: WeatherIcon,
   temp: number,
   datetime: string,
 }
