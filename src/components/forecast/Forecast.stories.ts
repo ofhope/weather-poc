@@ -1,21 +1,27 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Weather } from '.';
+import { Forecast } from '.';
 
 const meta = {
-  title: 'form/Weather',
-  component: Weather,
+  title: 'form/Forecast',
+  component: Forecast,
   parameters: {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
 
-} satisfies Meta<typeof Weather>;
+} satisfies Meta<typeof Forecast>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children: "Foo"
+    hours: [
+      {
+        temp: 14.3,
+        icon: "cloudy",
+        datetime: "07:00:00"
+      }
+    ]
   }
 };
